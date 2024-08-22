@@ -1,0 +1,101 @@
+/* General Body Styling */
+.body {
+  background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20230624/pngtree-red-and-blue-neon-lit-3d-geometric-corridor-4k-uhd-abstract-image_3660615.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh; 
+}
+
+.product-detail {
+  display: flex;
+  max-width: 1200px;
+  margin: 50px auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(135deg, #f5f7fa, #c3cfe2); 
+  position: relative;
+  background-color: #fff; 
+}
+
+.product-image-container {
+  position: relative;
+  width: 300px; 
+  height: 300px; 
+  overflow: hidden;
+  margin-right: 15px; 
+  background: #fff; 
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.product-image-scroll {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  transform: translateY(0);
+  transition: opacity 0.5s ease-in-out;
+}
+
+.product-image-container:hover .product-image-scroll:nth-child(1) {
+  opacity: 0;
+}
+
+.product-image-container:hover .product-image-scroll:nth-child(2) {
+  opacity: 1;
+}
+
+@keyframes scrollImages {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100%); 
+  }
+}
+
+/* Product Content Styling */
+.product-content {
+  flex: 1;
+  margin-left: 20px; 
+}
+
+.product-content h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.product-content p {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.product-content .price {
+  font-size: 1.5rem;
+  color: #ff4c4c;
+  font-weight: bold;
+}
+
+.product-content .discount {
+  color: #4caf50;
+  font-weight: bold;
+}
+
+.product-content .save {
+  color: #ff9800;
+}
+
+.product-content .description {
+  margin-bottom: 20px;
+}
+
+.product-content p:not(:last-child) {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
